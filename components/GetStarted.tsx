@@ -1,4 +1,4 @@
-import styles from '@/app/style'
+import Image from 'next/image'
 import { typestherapy } from '@/constants'
 
 export const GetStarted = () => {
@@ -10,7 +10,7 @@ export const GetStarted = () => {
                     {
                         typestherapy.map((therapy, index) => (
                         <div key={therapy.id} className='max-w-sm rounded-2xl overflow-hidden shadow-lg'>
-                            <img alt='content' src={`${therapy.img}`} />
+                            <Image alt='content' src={`${therapy.img}`} />
                             <div className='px-6 py-4'>                                
                                 <h2 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>{`${therapy.title}`}</h2>
                                 <p className='font-poppins mb-3 font-normal text-gray-700 dark:text-gray-400'>{`${therapy.content}`}</p>
@@ -37,7 +37,7 @@ export const GetStarted = () => {
                         typestherapy.map((therapy, index) => (
                         <div key={therapy.id}>
                             <div className="rounded-lg h-64 overflow-hidden">
-                                <img alt="content" className="object-cover object-center h-full w-full" src={`${therapy.img}`} />
+                                <Image alt="content" className="object-cover object-center h-full w-full" src={`${therapy.Image}`} />
                             </div>
                             <h2 className='text-xl font-bold font-poppins text-gradient title-font mt-5'>{`${therapy.title}`}</h2>
                             <p className='font-poppins text-base text-gray-700 leading-relaxed mt-2'>{`${therapy.content}`}</p>
